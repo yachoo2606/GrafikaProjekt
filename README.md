@@ -3,7 +3,7 @@
 
 To run this project you will need the [**Node Js**](https://nodejs.org/download/release/v16.17.0/)
 
-After nodeJS installation in main project window run commands
+After nodeJS installation in main project directory run commands in terminal
 
 <br>
 
@@ -21,9 +21,9 @@ after dependencies installation
 
 <br>
 
-and our aplication is working with webpack
+and our aplication is working. 
 
-to see the result in web browser localy we need to install extension in vscode the [**Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+Now to see the result in web browser localy we need to install extension in vscode the [**Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 <br>
 

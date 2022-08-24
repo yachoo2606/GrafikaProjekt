@@ -1,8 +1,6 @@
 import * as THREE from "three";
 
-import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
-import {TDSLoader } from 'three/examples/jsm/loaders/TDSLoader';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import FireParticleSystem from './FireParticleSystem'

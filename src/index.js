@@ -38,54 +38,58 @@ function init() {
 
 	// camera
 	camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 5000);
-	camera.position.set(-100, 100, 230);
+	camera.position.set(-150, 120, 240);
 
 	cameraControls = new OrbitControls(camera, renderer.domElement);
-	cameraControls.target.set(0, 40, 0);
+	cameraControls.target.set(10, 50, 0);
 	cameraControls.maxDistance = 400;
 	cameraControls.minDistance = 10;
 	cameraControls.update();
 
 	//wals
-	const planeGeo = new THREE.PlaneGeometry(100.1, 100.1);
+	const planeGeo = new THREE.PlaneGeometry(150.1, 150.1);
 
-	const planeBottom = new THREE.Mesh(planeGeo, new THREE.MeshLambertMaterial({
-		color: 0xffffff
+	const lamineFlorTexture = new THREE.TextureLoader().load( 'resources/concrete_floor.jpg' );
+	const redBricksTexture = new THREE.TextureLoader().load('resources/red_bricks.jpg');
+	const sandStoneTexture = new THREE.TextureLoader().load('resources/sandstone_brick_wall.jpg');
+
+	const planeFloor = new THREE.Mesh(planeGeo, new THREE.MeshLambertMaterial({
+		map:lamineFlorTexture
 	}));
-	planeBottom.rotateX(-Math.PI / 2);
-	scene.add(planeBottom);
+	planeFloor.rotateX(-Math.PI / 2);
+	scene.add(planeFloor);
 
-	const planeBack = new THREE.Mesh(planeGeo, new THREE.MeshLambertMaterial({
-		color: 0x000001
+	const planeBackWall = new THREE.Mesh(planeGeo, new THREE.MeshLambertMaterial({
+		map:sandStoneTexture
 	}));
-	planeBack.position.z = -50;
-	planeBack.position.y = 50;
-	scene.add(planeBack);
+	planeBackWall.position.z = -75;
+	planeBackWall.position.y = 75;
+	scene.add(planeBackWall);
 
-	const planeFront = new THREE.Mesh(planeGeo, new THREE.MeshLambertMaterial({
-		color: 0x7f7fff
+	const planeFrontWall = new THREE.Mesh(planeGeo, new THREE.MeshLambertMaterial({
+		map:sandStoneTexture
 	}));
-	planeFront.position.z = 50;
-	planeFront.position.y = 50;
-	planeFront.rotateY(Math.PI);
-	scene.add(planeFront);
+	planeFrontWall.position.z = 75;
+	planeFrontWall.position.y = 75;
+	planeFrontWall.rotateY(Math.PI);
+	scene.add(planeFrontWall);
 
-	const planeRight = new THREE.Mesh(planeGeo, new THREE.MeshLambertMaterial({
-		color: 0x00ff00
+	const planeRightWall = new THREE.Mesh(planeGeo, new THREE.MeshLambertMaterial({
+		map:redBricksTexture
 	}));
-	planeRight.position.x = 50;
-	planeRight.position.y = 50;
-	planeRight.rotateY(-Math.PI / 2);
-	scene.add(planeRight);
+	planeRightWall.position.x = 75;
+	planeRightWall.position.y = 75;
+	planeRightWall.rotateY(-Math.PI / 2);
+	scene.add(planeRightWall);
 
 
-	const planeLeft = new THREE.Mesh(planeGeo, new THREE.MeshLambertMaterial({
-		color: 0xff0000
+	const planeLeftWall = new THREE.Mesh(planeGeo, new THREE.MeshLambertMaterial({
+		map:redBricksTexture
 	}));
-	planeLeft.position.x = -50;
-	planeLeft.position.y = 50;
-	planeLeft.rotateY(Math.PI / 2);
-	scene.add(planeLeft);
+	planeLeftWall.position.x = -75;
+	planeLeftWall.position.y = 75;
+	planeLeftWall.rotateY(Math.PI / 2);
+	scene.add(planeLeftWall);
 
 
 	// topLeftBacklight

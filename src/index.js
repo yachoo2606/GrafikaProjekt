@@ -134,7 +134,7 @@ function init() {
 		scene.add(gltf.scene);
 	});
 
-	textureloader.load('resources/wood/Fire_Pit_texture.png',
+	textureloader.load('resources/wood/Fire_Pit_Texture.png',
 		function ( texture ) {
 			const material = new THREE.MeshBasicMaterial( {
 				map: texture
@@ -178,7 +178,7 @@ function init() {
 
 		// onError callback
 		function ( err ) {
-			console.error( 'An error happened.' );
+			console.error( err );
 		}
 	);
 	

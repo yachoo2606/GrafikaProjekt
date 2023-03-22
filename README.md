@@ -28,6 +28,5 @@ Now to see the result in web browser localy we need to install extension in vsco
 <br>
 
 # Preview
-Working demo &#8594; <a href="http://possnan.pl" target="_blank">Here</a>
 
 ![Alt text](demo.png?raw=true "Title")

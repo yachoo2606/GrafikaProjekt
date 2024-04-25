@@ -17,15 +17,7 @@ after dependencies installation
 
 <br>
 
-```npm run build```
-
-<br>
-
-and our aplication is working. 
-
-Now to see the result in web browser localy we need to install extension in vscode the [**Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-
-<br>
+```node server.js```
 
 # Preview
 
